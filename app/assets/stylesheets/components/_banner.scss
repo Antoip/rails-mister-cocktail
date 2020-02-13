@@ -1,0 +1,44 @@
+.banner {
+  height: 33vh;
+  font-family: 'Esteban', serif;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.links-container {
+  a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.8);
+    margin: 0px 16px;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  };
+}
+
+.logo-banner {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+
+.banner-photo {
+  position: absolute;
+  top: 72px;
+  right: 40px;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://unsplash.com/xBFTjrMIC0c/700x250");
+  background-size: cover;
+  border-radius: 4px;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(0,0,0,0.8);
+  border-radius: 5px;
+  padding: 4px 12px;
+  &:hover {
+    color: black;
+  }
+}
