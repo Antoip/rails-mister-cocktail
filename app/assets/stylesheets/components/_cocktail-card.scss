@@ -1,9 +1,3 @@
-.cocktails-cards-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
-
 .cocktail-card {
   border-radius: 4px;
   text-align: left;
@@ -34,3 +28,4 @@
     color: black;
   }
 }
+
