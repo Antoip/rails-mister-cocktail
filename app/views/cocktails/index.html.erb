@@ -1,0 +1,10 @@
+<div class="index-title">
+  <h1>Cocktails Collection</h1>
+</div>
+<div class="container">
+  <% @cocktails.each do |cocktail| %>
+    <div class="cocktail-card m-3">
+      <h3><%= cocktail.name %></h3>
+    </div>
+  <% end %>
+</div>
