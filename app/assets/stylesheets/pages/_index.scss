@@ -12,7 +12,17 @@
 .cocktails-cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
 
 .banner-searchbar {

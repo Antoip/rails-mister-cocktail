@@ -11,14 +11,16 @@
     </form>
   </div>
   <div class="cocktails-cards-container">
+
     <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail), class: "card-link" do %>
-        <div class="cocktail-card m-3">
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="cocktail-card">
           <div class="cocktail-picture"><img src=<%= "https://source.unsplash.com/featured/?#{cocktail.name}" %>></div>
           <h5><%= cocktail.name %></h5>
         </div>
       <% end %>
     <% end %>
   </div>
+
   <%= link_to "Add your creation", new_cocktail_path %>
 </div>
