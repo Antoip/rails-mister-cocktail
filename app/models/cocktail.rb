@@ -8,9 +8,9 @@ class Cocktail < ApplicationRecord
 
   def grade
     grade = 0
-    self.reviews.each do |review|
+    reviews.each do |review|
       grade += review.rating
     end
-    grade = grade.fdiv(self.reviews.length).round()
+    grade = grade.fdiv(reviews.length).round()
   end
 end
