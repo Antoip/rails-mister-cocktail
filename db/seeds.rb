@@ -42,32 +42,42 @@ JSON.parse(open(url).read)["drinks"].each do |ingredient|
 end
 
 puts "Shaking up these into cocktails"
+mojito_photo = URI.open('https://images.unsplash.com/photo-1551538827-9c037cb4f32a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 mojito = Cocktail.new(name: "Mojito")
+mojito.photo.attach(io: mojito_photo, filename: 'mojito.jpg', content_type: 'image/jpg')
 mojito.save!
-mojito1 = Dose.create(description: "4cl light rum", cocktail_id: 1, ingredient_id: 1)
-mojito2 = Dose.create(description: "3 mint leaves", cocktail_id: 1, ingredient_id: 2)
-mojito3 = Dose.create(description: "2 limes", cocktail_id: 1, ingredient_id: 3)
+Dose.create(description: "4cl light rum", cocktail_id: 1, ingredient_id: 1)
+Dose.create(description: "3 mint leaves", cocktail_id: 1, ingredient_id: 2)
+Dose.create(description: "2 limes", cocktail_id: 1, ingredient_id: 3)
 
+tequila_sunrise_photo = URI.open('https://noseychef.com/wp-content/uploads/2018/07/IMG_3754.jpg')
 tequila_sunrise = Cocktail.new(name: "Tequila Sunrise")
+tequila_sunrise.photo.attach(io: tequila_sunrise_photo, filename: 'tequila_sunrise.jpg', content_type: 'image/jpg')
 tequila_sunrise.save!
-tequila_sunrise1 = Dose.create(description: "4cl light tequila", cocktail_id: 2, ingredient_id: 4)
-tequila_sunrise2 = Dose.create(description: "15cl orange juice", cocktail_id: 2, ingredient_id: 5)
-tequila_sunrise3 = Dose.create(description: "5cl grenadine", cocktail_id: 2, ingredient_id: 6)
+Dose.create(description: "4cl light tequila", cocktail_id: 2, ingredient_id: 4)
+Dose.create(description: "15cl orange juice", cocktail_id: 2, ingredient_id: 5)
+Dose.create(description: "5cl grenadine", cocktail_id: 2, ingredient_id: 6)
 
+caipirinha_photo = URI.open('https://images.unsplash.com/photo-1512144981474-0003a89c0165?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 caipirinha = Cocktail.new(name: "Caïpirinha")
+caipirinha.photo.attach(io: caipirinha_photo, filename: 'caipirinha.jpg', content_type: 'image/jpg')
 caipirinha.save!
-caipirinha1 = Dose.create(description: "4cl cachaça", cocktail_id: 3, ingredient_id: 7)
-caipirinha2 = Dose.create(description: "3 limes", cocktail_id: 3, ingredient_id: 8)
-caipirinha3 = Dose.create(description: "15cl lemonade", cocktail_id: 3, ingredient_id: 9)
+Dose.create(description: "4cl cachaça", cocktail_id: 3, ingredient_id: 7)
+Dose.create(description: "3 limes", cocktail_id: 3, ingredient_id: 8)
+Dose.create(description: "15cl lemonade", cocktail_id: 3, ingredient_id: 9)
 
+moscow_mule_photo = URI.open('https://images.unsplash.com/photo-1527628126150-086ff233b951?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 moscow_mule = Cocktail.new(name: "Moscow Mule")
+moscow_mule.photo.attach(io: moscow_mule_photo, filename: 'moscow_mule.jpg', content_type: 'image/jpg')
 moscow_mule.save!
-moscow_mule1 = Dose.create(description: "4cl vodka", cocktail_id: 4, ingredient_id: 10)
-moscow_mule2 = Dose.create(description: "10cl milk", cocktail_id: 4, ingredient_id: 11)
-moscow_mule3 = Dose.create(description: "4cl bourbon", cocktail_id: 4, ingredient_id: 12)
+Dose.create(description: "4cl vodka", cocktail_id: 4, ingredient_id: 10)
+Dose.create(description: "10cl milk", cocktail_id: 4, ingredient_id: 11)
+Dose.create(description: "4cl bourbon", cocktail_id: 4, ingredient_id: 12)
 
+bloody_mary_photo = URI.open('https://images.unsplash.com/photo-1551734322-f43b0798585a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 bloody_mary = Cocktail.new(name: "Bloody Mary")
+bloody_mary.photo.attach(io: bloody_mary_photo, filename: 'bloody_mary.jpg', content_type: 'image/jpg')
 bloody_mary.save!
-bloody_mary1 = Dose.create(description: "2cl vodka", cocktail_id: 5, ingredient_id: 13)
-bloody_mary2 = Dose.create(description: "15cl tomato juice", cocktail_id: 5, ingredient_id: 14)
-bloody_mary3 = Dose.create(description: "1 ts nutmeg", cocktail_id: 5, ingredient_id: 15)
+Dose.create(description: "2cl vodka", cocktail_id: 5, ingredient_id: 13)
+Dose.create(description: "15cl tomato juice", cocktail_id: 5, ingredient_id: 14)
+Dose.create(description: "1 ts nutmeg", cocktail_id: 5, ingredient_id: 15)
