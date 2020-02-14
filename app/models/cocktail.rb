@@ -5,4 +5,12 @@ class Cocktail < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   has_one_attached :photo
+
+  def grade
+    grade = 0
+    self.reviews.each do |review|
+      grade += review.rating
+    end
+    grade = grade.fdiv(self.reviews.length).round()
+  end
 end

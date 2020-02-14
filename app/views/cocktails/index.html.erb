@@ -16,18 +16,16 @@
       <%= link_to cocktail_path(cocktail) do %>
         <div class="cocktail-card">
           <div class="cocktail-picture"><%= cl_image_tag(cocktail.photo.key, height: 300, width: 400, crop: :fill) %></div>
-          <div class="name-block">
-            <h5><%= cocktail.name %></h5>
-            <div class="stars">
-              <% grade = 0
-                cocktail.reviews.each do |review|
-                  grade += review.rating
-                end
-                grade = grade.fdiv(cocktail.reviews.length).round() %>
-              <% grade.times do %>
-                <i class="fas fa-star"></i>
-              <% end %>
+          <div class="cocktail-details">
+            <div class="name-block">
+              <h5><%= cocktail.name %></h5>
+              <div class="stars">
+                <% cocktail.grade.times do %>
+                  <i class="fas fa-star"></i>
+                <% end %>
+              </div>
             </div>
+            <p class="review-number">(<%= cocktail.reviews.length %> Reviews)</p>
           </div>
         </div>
       <% end %>
