@@ -15,12 +15,22 @@
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
         <div class="cocktail-card">
-          <div class="cocktail-picture"><%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %></div>
-          <h5><%= cocktail.name %></h5>
+          <div class="cocktail-picture"><%= cl_image_tag(cocktail.photo.key, height: 300, width: 400, crop: :fill) %></div>
+          <div class="name-block">
+            <h5><%= cocktail.name %></h5>
+            <div class="stars">
+              <% grade = 0
+                cocktail.reviews.each do |review|
+                  grade += review.rating
+                end
+                grade = grade.fdiv(cocktail.reviews.length).round() %>
+              <% grade.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+            </div>
+          </div>
         </div>
       <% end %>
     <% end %>
   </div>
-
-  <%= link_to "Add your creation", new_cocktail_path %>
 </div>

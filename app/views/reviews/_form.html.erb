@@ -1,0 +1,5 @@
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.submit "Leave Review", class: "btn btn-primary w-100" %>
+<% end %>

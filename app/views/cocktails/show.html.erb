@@ -21,5 +21,24 @@
       <%= render './doses/form', dose: @dose %>
     </div>
   </div>
-
 </div>
+<div class="show-title title-review">
+  <h1>Reviews</h1>
+</div>
+<div class="reviews-container">
+  <% @cocktail.reviews.each do |review| %>
+    <div class="review-block">
+      <div class="stars">
+        <% review.rating.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+      </div>
+      <p><%= review.content %></p>
+    </div>
+  <% end %>
+  <div class="review-form">
+    <h4>Add your review</h4>
+    <%= render './reviews/form', review: @review %>
+  </div>
+</div>
+
